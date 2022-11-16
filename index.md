@@ -69,22 +69,22 @@ all computers will produce different output. It saves time and money, and can't 
 Not all computers and browsers are built equally; therefore, they will produce a different time output each time. every browsers are built different
 
 # Problem 5
+Two constant (push & pop), two linear, and nested for...loop\
+Total: O(1) + 0(1)+ O(n) + O(n) + O(n^2)
 
-total: 0(1)+ O(n) + O(n) + O(n^2)
+Consolidated: 2 + 2n+ n^2 => 2 + n + n^2 => n^2
 
-consolidated: 1 + 2n+ n^2 => 1 + n + n^2 => n^2
-
-final: n^2 b/c we look at worst case scenario
+Final: n^2 b/c we look at worst case scenario
 
 # Problem 6
+Constant, linear, and nested triple for...loop
+Total: 1 + n + n ^ 3
 
-total: 1 + n + n ^ 3
-
-consolidated: n^3
+Consolidated: n^3
 
 # Problem 7
 
-we don't care about details, we care about trend. which one is the worst behavior
+We ignore constants and consolidate our time complexitities because we don't care about details, we only care about the trend. In addition, the trend with the worst behavior has more weight to dictate Big O. 
 
 # Problem 8
 
@@ -136,9 +136,9 @@ space = how much memory it takes. save money to use less memory in the computer
 
 ## problem 1
 
-time: n^2\
-space: linear\
-explanation: 
+time: n^2 because two nested loops\
+space: linear due to iteratering
+
 
 ## problem 2
 
@@ -152,7 +152,7 @@ space:
 
 ## problem 4
 
-time: \
+time: linear because you're iterating through each element in the\
 space:
 
 ## problem 5
