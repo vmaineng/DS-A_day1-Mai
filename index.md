@@ -77,8 +77,8 @@ Consolidated: 2 + 2n+ n^2 => 2 + n + n^2 => n^2
 Final: n^2 b/c we look at worst case scenario
 
 # Problem 6
-Constant, linear, and nested triple for...loop
-Total: 1 + n + n ^ 3
+Constant, linear, constant, and nested triple for...loop
+Total: 1 + n + 1 + n ^ 3 => 2 + n + n^
 
 Consolidated: n^3
 
@@ -137,50 +137,50 @@ space = how much memory it takes. save money to use less memory in the computer
 ## problem 1
 
 time: n^2 because two nested loops\
-space: linear due to iteratering
+space: constant because it returns an integer.
 
 
 ## problem 2
 
 time: \
-space:
+space: linear because it returns an array of elements
 
 ## problem 3
 
 time: \
-space:
+space: linear because it returns text (string).
 
 ## problem 4
 
 time: linear because you're iterating through each element in the\
-space:
+space: constant because it returns an integer.
 
 ## problem 5
 
 time: \
-space:
+space: constant because it returns an integer;
 
 ## problem 6
 
 time: \
-space:
+space: constant because it returns an integer;
 
 ## problem 7
 
 time: \
-space:
+space: linear because it returns an array of pairs.
 
 ## problem 8
 
-time: \
-space:
+time: linear, linear, \
+space: linear because it returns an array. 
 
 ## problem 9
 
-time: \
-space:
+time: linear, constant, constant => O(n)\
+space: linear because it returns an array.
 
 ## problem 10
 
-time: \
-space:
+time: constant, constant => O(1)\
+space: constant because it returns an integer.
