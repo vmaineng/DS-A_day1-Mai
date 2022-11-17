@@ -1,51 +1,66 @@
 # Problem 1
 
-Big O notation is a method to measure algorithms. It takes into consideration how much time the code will take to run (time) and how much memory it will consume (space). Also, it helps look at the trends of the code instead of each specific details.
+Big O notation is a method to measure how a code will perform. It looks at the trend of the operations it needs to take to complete to either produce a value or complete a task. Big O notation takes into consideration how much time the code will take to run (time) and how much memory it will consume (space). It allows us to see the bigger picture instead of focusing on the details. 
 
 # Problem 2
 
 1. O(1) constant = rank 1\
-   It doesn't matter on the length of the inputs because the time complexity will remain the same.
+   It doesn't matter how many inputs there are because the amount of work to run the code will remain the same for each input inserted into the code (known as constant time).
 
 ```js
-const example1 = (num1, num2) => {
-  return num1 * num2;
+const box = [1, 2, 3, 4]
+
+const logBoxes = (box) => {
+  console.log(box[0]);
+  console.log(box[1]);
 };
+
+logBoxes(box); // total time complexity: O(2) => consolidated: 0(1)
 ```
 
 2. O(log n) logarimetic = rank 2\
-   This time complexity starts increasing in the beginning and slowly decreased at the end because it does not look at each elements\
-   ex: skip by 2+ in the step && binary search
+   This time complexity starts increasing in the beginning and slowly tapers off at the end. Also, it does not iterate through every single elements.\
+   ex: skip by 2+ in the step && binary search (lookup, insert, and delete)
 
 ```js
-for (let i = 0; i < arr.length; i *= 2) {
+const arr = [1, 2, 3, ,4]
+
+for (let i = 0; i < arr.length; i *= 3) {
   console.log(i);
 }
 ```
 
 3. O(n) linear = rank 3\
-   It iterate one item at a time
+   Linear time occurs when the code is applying the same amount of work to each individual item in the data structure.
    ex: for..loops, while loop, forEach, map, find\
 
 ```js
+const array = [1, 2, 3, 4]
+
 array.forEach((element) => {
   console.log(element);
 });
 ```
 
 4. O(n^2) quadratic - n x n; rank 4\
+As the elements increases, the amount of work for each element increases significantly. For example, if there are 4 elements, the amount of work increases quadraticly (ex: starts at 4, increases to 16 (4^2), etc.\
    ex: nested for loops; map inside a for loop\
 
 ```js
+const array = [1, 2, 3, ,4]
+
+function logTwo(n)
 for (let i = 0; i < n.length; i++) {
   for (let j = 0; j < n.length; j++) {
-    console.log(i, j);
+    console.log(n[i], n[j]);
   }
 }
+
+logTwo(array)
 ```
 
 5. O(n!) factorial = rank 5\
-    difficult to achieve in real life
+It is difficult to achieve in real life. There are infinite ways to achieve the solutions.\
    ex: recursion
 
 ```js
@@ -60,50 +75,53 @@ function getLog(base, n) {
 console.log(getLog(16, 2));
 ```
 
-# Problem 3
-
-all computers will produce different output. It saves time and money, and can't assess the same code with all computers. Also, it has scalability of the code ; if we add more data and code, we want it to execute it effectively
+# Problem 3 (come back to problem 2 and 3)
+We care about Big O and code performance because:
+1) All computers will produce different output. 
+2) It saves time and money, and can't assess the same code with all computers. 
+3) It has scalability of the code ; if we add more data and code, we want it to execute it effectively
 
 # Problem 4
 
-Not all computers and browsers are built equally; therefore, they will produce a different time output each time. every browsers are built different
+We can't use performance.now() to measure the results of the code since not all computers and browsers are built equally; therefore, the computers will calculate a different 'run' result each time. For example, person1 is running the same code on their Windows computer on Firefox and person2 is running the same code on a Mac using Google Chrome. Although they are running the same code, they will get different results due to different browsers and computer.
 
 # Problem 5
 Two constant (push & pop), two linear, and nested for...loop\
-Total: O(1) + 0(1)+ O(n) + O(n) + O(n^2)
+<strong>Total: </strong> O(1) + 0(1)+ O(n) + O(n) + O(n^2)
 
-Consolidated: 2 + 2n+ n^2 => 2 + n + n^2 => n^2
+<strong>Consolidated: </strong> 2 + 2n+ n^2 => 2 + n + n^2 => n^2
 
-Final: n^2 b/c we look at worst case scenario
+Final: n^2 b/c worst case scenario has more weight on how the code will perform.
 
 # Problem 6
 Constant, linear, constant, and nested triple for...loop
-Total: 1 + n + 1 + n ^ 3 => 2 + n + n^
+<strong>Total: </strong> 1 + n + 1 + n ^ 3 => 2 + n + n^
 
-Consolidated: n^3
+<strong>Consolidated: </strong> n^3
 
 # Problem 7
 
-We ignore constants and consolidate our time complexitities because we don't care about details, we only care about the trend. In addition, the trend with the worst behavior has more weight to dictate Big O. 
+We ignore constants and consolidate our time complexitities because we don't care about the details, we only care about the trend. In addition, the trend with the worst behavior has more weight to dictate Big O. (need more)
 
-# Problem 8
+# Problem 8 (need more)
 
-space = how much memory it takes. save money to use less memory in the computer
+Space complexity pertains to  how much memory the code will use. We care about space complexity to save money to refrain from having to buy more storage space for the computer.
 
 # Problem 9
 
-1. boolean = constant ; 1 or 0;
+1. boolean = constant  
 2. undefined = constant
 3. null = constant
 4. number = constant
-5. string = linear; strings can be constant;
-6. array = linear
-7. object = linear
+
+1. string (text) = linear; 
+2. array = linear
+3. object = linear
 
 # Problem 10
 
-1. array = when you want to access an ordered list and can access the data fast knowing where it is stored in memory
-2. object = when you want to access key collection and the data does not need to be in order
+1. array = when you want to access an ordered list and can access the data fast
+2. object = when you want to access a key collection and the data does not need to be in order
 
 # Problem 11
 
