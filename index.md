@@ -104,18 +104,18 @@ Final: n^2 b/c worst case scenario has more weight on how the code will perform.
 
 # Problem 6
 
-Constant, linear, constant, and nested triple for...loop
+Constant, linear, constant, and nested triple for...loop\
 <strong>Total: </strong> 1 + n + 1 + n ^ 3 => 2 + n + n^
 
 <strong>Consolidated: </strong> n^3
 
 # Problem 7
 
-We ignore constants and consolidate our time complexitities because we don't care about the details, we only care about the trend. The trends are listed in the Big O complexity chart, as noted on this website (https://www.bigocheatsheet.com/). In addition, the trend with the worst behavior has more weight to dictate Big O notation.
+We ignore constants and consolidate our time complexitities because we don't care about the details, we only care about the overall trend. The trends are listed in the Big O complexity chart, as noted on this website (https://www.bigocheatsheet.com/). In addition, the trend with the worst behavior has more weight to dictate Big O notation.
 
 # Problem 8 
 
-Space complexity pertains to how much memory the code will use. We care about space complexity to save money to refrain from having to buy more storage(memory) space for the computer.
+Space complexity pertains to how much memory the code will use when executed. We care about space complexity to save money to refrain from having to buy more storage(memory) space for the computer and to be able to run as many programs as possible from a computer.
 
 # Problem 9
 
