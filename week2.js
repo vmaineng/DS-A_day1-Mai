@@ -85,7 +85,7 @@ const bonusQuestion = (str) => {
             start++;
             
         } else {
-            map.set(str[i])
+            map.set(str[i]) //set stores key; not value
         }
     }
     return maxLength;
