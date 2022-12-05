@@ -69,13 +69,19 @@
 
 // console.log(factorial(7))
 
-
 //recursive approach
 
+function factorial(x) {
 
+//base case - exit the loop
+if (x === 2) return 2;
 
-//base case
+//recursive case - to recall the function
+return x * factorial(x-1);
 
+}
+
+console.log(factorial(5))
 
 //problem 4 recursion
 
