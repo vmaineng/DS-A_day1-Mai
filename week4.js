@@ -47,6 +47,34 @@
 
 //problem 3 recursion
 
+//iterative method
+// function factorial(x){
+//step 1 edge cases - if x is not a number, return -1
+//if (x !== NaN) return -1;
+
+//initialize sum
+//let sum = 1;
+
+//base case
+// if (sum === 2) {
+//     return sum = 2;
+// }
+
+//iterate through numbers; not positions; to get the previous number and keep multiplying
+// for (let i = 2; i <= x; i++){
+//   sum =  sum * i;
+// }
+// return sum;
+// }
+
+// console.log(factorial(7))
+
+
+//recursive approach
+
+
+
+//base case
 
 
 //problem 4 recursion
