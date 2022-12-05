@@ -28,20 +28,22 @@
 
 //problem 2 recursion
 
-//const capitalizeAllLetters = (array) => {
+// const capitalizeAllLetters = (array) => {
 
 //edge cases
-//if (!array.length) return -1;
+// if (!array.length) return -1;
 
 //base case - exit the loop
-//if (array.toUpperCase()) return array;
+// if (array.length === 1) return [array[0].toUpperCase()];
 
 //recursive path - recall the function
-//capitalizeAllLetters(array.toUpperCase());
+// let results = capitalizeAllLetters(array.slice(0, -1));
+// results.push(array.slice(array.length - 1)[0].toUpperCase());
+// return results;
 
-//}
+// }
 
-//console.log(capitalizeAllLetters(['tony', 'kim']));
+// console.log(capitalizeAllLetters(['mai', 'vang']));
 
 //problem 3 recursion
 
@@ -53,3 +55,39 @@
 
 
 //problem 5 bubble sort
+
+// const data = [ 
+//     { 
+//         name: 'John Smith',  
+//         age: new Map('age', 88),  
+//         favoriteMovie: [ 
+//             { 
+//                 title: 'Hulk',  
+//                 genre: 'action',  
+//                 rating: 6 
+//             } 
+//         ] 
+//     }, 
+//     { 
+//         name: 'Tony Kim',  
+//         age: new Map('age', 33),  
+//         favoriteMovie: [ 
+//             { 
+//                 title: 'Top Gun',  
+//                 genre: 'action',  
+//                 rating: 10 
+//             } 
+//         ] 
+//     }, 
+//     { 
+//         name: 'John Smith',  
+//         age: new Map('age', 15),  
+//         favoriteMovie: [ 
+//             { 
+//                 title: 'Saw',  
+//                 genre: 'horror',  
+//                 rating: 8 
+//             } 
+//         ] 
+//     } 
+// ]
