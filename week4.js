@@ -71,22 +71,43 @@
 
 //recursive approach
 
-function factorial(x) {
+// function factorial(x) {
+//edge case - if x is not a number, return -1
+// if (x !== NaN) return -1;
 
 //base case - exit the loop
-if (x === 2) return 2;
+// if (!x) return 1;
 
 //recursive case - to recall the function
-return x * factorial(x-1);
+// return x * factorial(x-1);
+// }
 
-}
-
-console.log(factorial(5))
+// console.log(factorial(5))
 
 //problem 4 recursion
 
 
+function collectStrings(obj) {
 
+//initalize an array
+let results = [];
+
+//edge case = if object is empty, return -1
+if (!Object.keys(obj).length) return -1;
+
+//base case - exit the loop
+for (let key in obj){
+    if (typeof obj[key] === 'string'){
+        results.push(obj[key]);
+    } else if (typeof obj[key] === 'object') {
+            results = results.concat(collectStrings(obj[key])) //need to avoid objects b/c the 2 turned into a -1, which we do not want
+        }
+    }
+
+return results;
+}
+
+console.log(collectStrings({a: "foo", b: 2, c: "bar"}));
 
 //problem 5 bubble sort
 
