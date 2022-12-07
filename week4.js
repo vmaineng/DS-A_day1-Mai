@@ -1,6 +1,6 @@
 //problem 1 recursion
 
-//iterative approach
+
 //const flatTheArray = (arr) => {
 
 //step 1 edge cases
@@ -48,44 +48,43 @@
 //problem 3 recursion
 
 //iterative method
-// function factorial(x){
+function factorial(x){
 //step 1 edge cases - if x is not a number, return -1
-//if (x !== NaN) return -1;
+//if (typeof x !== NaN) return -1;  --still figure this part out
 
 //initialize sum
-//let sum = 1;
+let sum = 1;
 
 //base case
-// if (sum === 2) {
-//     return sum = 2;
-// }
+if (sum === 2) {
+    return sum = 2;
+}
 
 //iterate through numbers; not positions; to get the previous number and keep multiplying
-// for (let i = 2; i <= x; i++){
-//   sum =  sum * i;
-// }
-// return sum;
-// }
+for (let i = 2; i <= x; i++){
+  sum =  sum * i;
+}
+return sum;
+}
 
-// console.log(factorial(7))
+console.log(factorial(7))
 
 //recursive approach
-
-// function factorial(x) {
+function factorial(x) {
 //edge case - if x is not a number, return -1
-// if (x !== NaN) return -1;
+if (x !== NaN) return -1;
 
 //base case - exit the loop
-// if (!x) return 1;
+if (!x) return 1;
 
 //recursive case - to recall the function
-// return x * factorial(x-1);
-// }
+return x * factorial(x-1);
+}
 
-// console.log(factorial(5))
+console.log(factorial(5))
 
 //problem 4 recursion
-// function collectStrings(obj) {
+function collectStrings(obj) {
 
 //initalize an array
 // let results = [];
@@ -109,58 +108,62 @@
 
 //problem 5 bubble sort
 
-const data = [ 
-    { 
-        name: 'John Smith',   
-        age: new Map([['age', 88]]),   
-        favoriteMovie: [  
-            {  
-                title: 'Hulk',   
-                genre: 'action',   
-                rating: 6  
-            }  
-        ]  
-    },  
-    {  
-        name: 'Tony Kim',   
-        age: new Map([['age', 3]]),   
-        favoriteMovie: [  
-            {  
-                title: 'Top Gun',   
-                genre: 'action',   
-                rating: 10  
-            }  
-        ]  
-    },  
-    {  
-        name: 'John Smith',   
-        age: new Map([['age', 35]]),   
-        favoriteMovie: [  
-            {  
-                title: 'Saw',   
-                genre: 'horror',   
-                rating: 8  
-            }  
-        ]  
-    }  
-]
+// const data = [ 
+//     { 
+//         name: 'John Smith',   
+//         age: new Map([['age', 88]]),   
+//         favoriteMovie: [  
+//             {  
+//                 title: 'Hulk',   
+//                 genre: 'action',   
+//                 rating: 6  
+//             }  
+//         ]  
+//     },  
+//     {  
+//         name: 'Tony Kim',   
+//         age: new Map([['age', 3]]),   
+//         favoriteMovie: [  
+//             {  
+//                 title: 'Top Gun',   
+//                 genre: 'action',   
+//                 rating: 10  
+//             }  
+//         ]  
+//     },  
+//     {  
+//         name: 'John Smith',   
+//         age: new Map([['age', 35]]),   
+//         favoriteMovie: [  
+//             {  
+//                 title: 'Saw',   
+//                 genre: 'horror',   
+//                 rating: 8  
+//             }  
+//         ]  
+//     }  
+// ]
 
 
-const bubbleSort = (arr) => {
-    for(let i = arr.length-1 ; i > 0; i--) {
-        for(let j = 0; j<i; j++) {
-            if(arr[j].age.get('age') > arr[j + 1].age.get('age')){
-                let temp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = temp;
-            }
-        }
-    }
-    return arr.reverse();
-}
+// const bubbleSort = (arr) => {
+//     for(let i = arr.length-1 ; i > 0; i--) {
+//         for(let j = 0; j<i; j++) {
+//             if(arr[j].age.get('age') > arr[j + 1].age.get('age')){
+//                 let temp = arr[j];
+//                 arr[j] = arr[j + 1];
+//                 arr[j + 1] = temp;
+//             }
+//         }
+//     }
+//     return arr.reverse();
+// }
 
-console.log(bubbleSort(data))
+// console.log(bubbleSort(data))
 
+
+
+
+/// just for fun ---- please ignore bottom part;
 //data.forEach((dat) => (console.log(dat.age.values()))) //grabbed age in an object
 
 // data.forEach((dat) => (console.log(dat.age))) //grabbed each individual age in a Map
