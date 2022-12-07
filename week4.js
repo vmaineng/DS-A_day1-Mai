@@ -85,64 +85,87 @@
 // console.log(factorial(5))
 
 //problem 4 recursion
-
-
-function collectStrings(obj) {
+// function collectStrings(obj) {
 
 //initalize an array
-let results = [];
+// let results = [];
 
 //edge case = if object is empty, return -1
-if (!Object.keys(obj).length) return -1;
+// if (!Object.keys(obj).length) return -1;
 
 //base case - exit the loop
-for (let key in obj){
-    if (typeof obj[key] === 'string'){
-        results.push(obj[key]);
-    } else if (typeof obj[key] === 'object') {
-            results = results.concat(collectStrings(obj[key])) //need to avoid objects b/c the 2 turned into a -1, which we do not want
-        }
-    }
+// for (let key in obj){
+//     if (typeof obj[key] === 'string'){
+//         results.push(obj[key]);
+//     } else if (typeof obj[key] === 'object') {
+//             results = results.concat(collectStrings(obj[key])) //need to avoid objects b/c the 2 turned into a -1, which we do not want
+//         }
+//     }
 
-return results;
-}
+// return results;
+// }
 
-console.log(collectStrings({a: "foo", b: 2, c: "bar"}));
+// console.log(collectStrings({a: "foo", b: 2, c: "bar"}));
 
 //problem 5 bubble sort
 
-// const data = [ 
-//     { 
-//         name: 'John Smith',  
-//         age: new Map('age', 88),  
-//         favoriteMovie: [ 
-//             { 
-//                 title: 'Hulk',  
-//                 genre: 'action',  
-//                 rating: 6 
-//             } 
-//         ] 
-//     }, 
-//     { 
-//         name: 'Tony Kim',  
-//         age: new Map('age', 33),  
-//         favoriteMovie: [ 
-//             { 
-//                 title: 'Top Gun',  
-//                 genre: 'action',  
-//                 rating: 10 
-//             } 
-//         ] 
-//     }, 
-//     { 
-//         name: 'John Smith',  
-//         age: new Map('age', 15),  
-//         favoriteMovie: [ 
-//             { 
-//                 title: 'Saw',  
-//                 genre: 'horror',  
-//                 rating: 8 
-//             } 
-//         ] 
-//     } 
-// ]
+const data = [ 
+    { 
+        name: 'John Smith',   
+        age: new Map([['age', 88]]),   
+        favoriteMovie: [  
+            {  
+                title: 'Hulk',   
+                genre: 'action',   
+                rating: 6  
+            }  
+        ]  
+    },  
+    {  
+        name: 'Tony Kim',   
+        age: new Map([['age', 3]]),   
+        favoriteMovie: [  
+            {  
+                title: 'Top Gun',   
+                genre: 'action',   
+                rating: 10  
+            }  
+        ]  
+    },  
+    {  
+        name: 'John Smith',   
+        age: new Map([['age', 35]]),   
+        favoriteMovie: [  
+            {  
+                title: 'Saw',   
+                genre: 'horror',   
+                rating: 8  
+            }  
+        ]  
+    }  
+]
+
+data.forEach((dat) => (console.log(dat.name))) //grabbed each individual names
+
+
+// let fun = 
+// {
+//     name: "Mai",
+//     age: new Map('age', 14)
+// }
+// ,
+// {
+//     name: "John",
+//     age: new Map('age', 15)
+// }
+;
+// for (let [key,value] of age.entries()) {
+//     console.log(key,value);
+// } => results: age 88
+
+
+// for (const value of age.values()) {
+//     console.log(value);
+// } 
+
+// console.log(Object.getEntries(fun.entries()))
