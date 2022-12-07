@@ -145,7 +145,25 @@ const data = [
     }  
 ]
 
-data.forEach((dat) => (console.log(dat.name))) //grabbed each individual names
+
+const bubbleSort = (arr) => {
+    for(let i = arr.length-1 ; i > 0; i--) {
+        for(let j = 0; j<i; j++) {
+            if(arr[j].age.get('age') > arr[j + 1].age.get('age')){
+                let temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+    return arr.reverse();
+}
+
+console.log(bubbleSort(data))
+
+//data.forEach((dat) => (console.log(dat.age.values()))) //grabbed age in an object
+
+// data.forEach((dat) => (console.log(dat.age))) //grabbed each individual age in a Map
 
 
 // let fun = 
