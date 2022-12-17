@@ -149,6 +149,15 @@ class SinglyLinkedList {
   }
 }
 
+// const newNode = new Node(4);
+// console.log(newNode);
+
+const newLinkedList = new SinglyLinkedList();
+newLinkedList.pop()
+
+console.log(newLinkedList)
+
+
 //problem 3
 //find maxarea - sliding window to find max between two elements
 
